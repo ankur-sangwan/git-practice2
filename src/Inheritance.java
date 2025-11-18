@@ -15,6 +15,8 @@ class B implements A{
   public void sayHello(){
     System.out.println("child method");
   }
+
+
 }
 
 public class Inheritance {
