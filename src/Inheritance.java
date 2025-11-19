@@ -1,5 +1,5 @@
 interface A{
- int add(int x, int y);
+ int add(int x, int y,int i,int j);
  default void sayHello(){
    System.out.println("interface method");
   }
@@ -9,8 +9,8 @@ interface A{
 }
 class B implements A{
 
-   public int add(int x, int y) {
-    return x+y;
+   public int add(int x, int y,int i,int j) {
+    return x+y+i+j;
   }
   public void sayHello(){
     System.out.println("child method");
@@ -23,7 +23,7 @@ public class Inheritance {
   public static void main(String[] args) {
     A obj=new B();
     obj.sayHello();
-    System.out.println(obj.add(2,3));
+    System.out.println(obj.add(2,3,4,5));
     A.greet();
   }
 }
